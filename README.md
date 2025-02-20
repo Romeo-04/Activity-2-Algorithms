@@ -1,5 +1,5 @@
-#Disaster Relief Allocation and Inventory Management System
-##Overview
+# Disaster Relief Allocation and Inventory Management System
+## Overview
 The Disaster Relief Allocation and Inventory Management System is a C++ command-line application designed to streamline the management and allocation of disaster relief supplies across multiple cities. It consolidates individual city datasets into a unified Metro Manila dataset, making it easier to monitor, search, and allocate resources efficiently during emergencies.
 
 ##Features
