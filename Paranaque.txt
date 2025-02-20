@@ -1,0 +1,10 @@
+canned_goods 200
+water_bottles 300
+rice 260
+noodles 220
+medicine 180
+blankets 190
+clothes 210
+diapers 230
+fuel 240
+first_aid 250
