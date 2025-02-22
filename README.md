@@ -23,8 +23,8 @@ Automatically updates the consolidated dataset after each allocation.
 Maintains persistent data by generating/updating files such as registered_cities.txt and metro_manila.txt.
 Creates sample data files automatically if they do not exist.
 
-## User Manual
-### Installation Guide:
+## User Manual 📖
+### Installation Guide: 
 #### The user should have a C++ IDE (The most recommended IDE is Code::Blocks, as the program might experience some issues with other IDE’s).
 #### Have the .cpp file downloaded.
 #### Open the .cpp file with the IDE.
