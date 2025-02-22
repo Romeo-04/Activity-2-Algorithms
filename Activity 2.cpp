@@ -190,33 +190,118 @@ void viewTransactions() {
 // -----------------------------------------------------------------------------
 void initializeSampleFiles() {
     vector<pair<string, vector<pair<string, int>>>> samples = {
-        {"Mandaluyong", { {"canned_goods",150}, {"water_bottles",200}, {"rice",250},
-                          {"noodles",180}, {"medicine",120}, {"blankets",130},
-                          {"clothes",170}, {"diapers",140}, {"fuel",110}, {"first_aid",160} }},
-        {"Caloocan",    { {"canned_goods",220}, {"water_bottles",210}, {"rice",300},
-                          {"noodles",190}, {"medicine",130}, {"blankets",150},
-                          {"clothes",200}, {"diapers",160}, {"fuel",180}, {"first_aid",170} }},
-        {"Manila",      { {"canned_goods",230}, {"water_bottles",250}, {"rice",280},
-                          {"noodles",210}, {"medicine",150}, {"blankets",170},
-                          {"clothes",190}, {"diapers",180}, {"fuel",200}, {"first_aid",190} }},
-        {"Paranaque",   { {"canned_goods",200}, {"water_bottles",300}, {"rice",260},
-                          {"noodles",220}, {"medicine",180}, {"blankets",190},
-                          {"clothes",210}, {"diapers",230}, {"fuel",240}, {"first_aid",250} }},
-        {"Pasay",       { {"canned_goods",210}, {"water_bottles",310}, {"rice",270},
-                          {"noodles",230}, {"medicine",190}, {"blankets",200},
-                          {"clothes",220}, {"diapers",240}, {"fuel",250}, {"first_aid",260} }},
-        {"QuezonCity",  { {"canned_goods",240}, {"water_bottles",320}, {"rice",290},
-                          {"noodles",250}, {"medicine",210}, {"blankets",220},
-                          {"clothes",230}, {"diapers",260}, {"fuel",270}, {"first_aid",280} }},
-        {"Pasig",       { {"canned_goods",250}, {"water_bottles",330}, {"rice",300},
-                          {"noodles",260}, {"medicine",220}, {"blankets",230},
-                          {"clothes",240}, {"diapers",270}, {"fuel",280}, {"first_aid",290} }}
+        {"Mandaluyong", {
+            {"canned_goods",150}, {"water_bottles",200}, {"rice",250},
+            {"noodles",180}, {"medicine",120}, {"blankets",130},
+            {"clothes",170}, {"diapers",140}, {"fuel",110}, {"first_aid",160},
+            {"flashlights",230}, {"batteries",150}, {"solar_lamps",170}, {"tents",180},
+            {"sleeping_bags",230}, {"mosquito_nets",230}, {"lighters",120}, {"umbrella",110},
+            {"plastic_buckets",230}, {"tarpaulins",100}, {"plastic_sheets",160}, {"hygiene_kits",220},
+            {"wet_wipes",150}, {"gloves",180}, {"trash_bags",170}, {"disposable_plates",190},
+            {"contact_list",200}, {"whistles",180}, {"helmets",120}, {"candles",230},
+            {"sandbags",200}, {"boots",150}, {"baby_formula",220}, {"notebooks",140},
+            {"hand_fans",210}, {"plastic_cups",140}, {"plastic_utensil",160}, {"safety_pins",200},
+            {"rubber_bands",100}, {"slippers",180}, {"raincoats",180}, {"plastic_containers",220},
+            {"tissue",220}, {"towels",140}, {"face_masks",140}, {"ziplock_bag",100},
+            {"biscuits",230}, {"powdered_milk",160}, {"energy_bars",230}, {"trail_mix",200}
+        }},
+        {"Caloocan", {
+            {"canned_goods",220}, {"water_bottles",210}, {"rice",300},
+            {"noodles",190}, {"medicine",130}, {"blankets",150},
+            {"clothes",200}, {"diapers",160}, {"fuel",180}, {"first_aid",170},
+            {"flashlights",180}, {"batteries",180}, {"solar_lamps",220}, {"tents",250},
+            {"sleeping_bags",190}, {"mosquito_nets",150}, {"lighters",200}, {"umbrella",210},
+            {"plastic_buckets",230}, {"tarpaulins",190}, {"plastic_sheets",230}, {"hygiene_kits",210},
+            {"wet_wipes",220}, {"gloves",190}, {"trash_bags",210}, {"disposable_plates",160},
+            {"contact_list",200}, {"whistles",200}, {"helmets",220}, {"candles",220},
+            {"sandbags",190}, {"boots",230}, {"baby_formula",160}, {"notebooks",230},
+            {"hand_fans",230}, {"plastic_cups",180}, {"plastic_utensil",240}, {"safety_pins",160},
+            {"rubber_bands",150}, {"slippers",200}, {"raincoats",170}, {"plastic_containers",160},
+            {"tissue",160}, {"towels",170}, {"face_masks",190}, {"ziplock_bag",240},
+            {"biscuits",230}, {"powdered_milk",170}, {"energy_bars",150}, {"trail_mix",150}
+        }},
+        {"Manila", {
+            {"canned_goods",230}, {"water_bottles",250}, {"rice",280},
+            {"noodles",210}, {"medicine",150}, {"blankets",170},
+            {"clothes",190}, {"diapers",180}, {"fuel",200}, {"first_aid",190},
+            {"flashlights",200}, {"batteries",170}, {"solar_lamps",190}, {"tents",160},
+            {"sleeping_bags",210}, {"mosquito_nets",150}, {"lighters",230}, {"umbrella",180},
+            {"plastic_buckets",240}, {"tarpaulins",190}, {"plastic_sheets",240}, {"hygiene_kits",180},
+            {"wet_wipes",180}, {"gloves",170}, {"trash_bags",180}, {"disposable_plates",150},
+            {"contact_list",170}, {"whistles",210}, {"helmets",240}, {"candles",210},
+            {"sandbags",210}, {"boots",250}, {"baby_formula",220}, {"notebooks",160},
+            {"hand_fans",240}, {"plastic_cups",210}, {"plastic_utensil",200}, {"safety_pins",250},
+            {"rubber_bands",150}, {"slippers",200}, {"raincoats",200}, {"plastic_containers",180},
+            {"tissue",190}, {"towels",170}, {"face_masks",230}, {"ziplock_bag",200},
+            {"biscuits",210}, {"powdered_milk",170}, {"energy_bars",230}, {"trail_mix",180}
+        }},
+        {"Paranaque", {
+            {"canned_goods",200}, {"water_bottles",300}, {"rice",260},
+            {"noodles",220}, {"medicine",180}, {"blankets",190},
+            {"clothes",210}, {"diapers",230}, {"fuel",240}, {"first_aid",250},
+            {"flashlights",170}, {"batteries",150}, {"solar_lamps",190}, {"tents",160},
+            {"sleeping_bags",140}, {"mosquito_nets",130}, {"lighters",150}, {"umbrella",120},
+            {"plastic_buckets",210}, {"tarpaulins",230}, {"plastic_sheets",110}, {"hygiene_kits",170},
+            {"wet_wipes",100}, {"gloves",180}, {"trash_bags",100}, {"disposable_plates",130},
+            {"contact_list",190}, {"whistles",220}, {"helmets",190}, {"candles",150},
+            {"sandbags",110}, {"boots",200}, {"baby_formula",100}, {"notebooks",120},
+            {"hand_fans",110}, {"plastic_cups",160}, {"plastic_utensil",140}, {"safety_pins",140},
+            {"rubber_bands",190}, {"slippers",210}, {"raincoats",190}, {"plastic_containers",150},
+            {"tissue",160}, {"towels",160}, {"face_masks",170}, {"ziplock_bag",230},
+            {"biscuits",160}, {"powdered_milk",140}, {"energy_bars",190}, {"trail_mix",160}
+        }},
+        {"Pasay", {
+            {"canned_goods",210}, {"water_bottles",310}, {"rice",270},
+            {"noodles",230}, {"medicine",190}, {"blankets",200},
+            {"clothes",220}, {"diapers",240}, {"fuel",250}, {"first_aid",260},
+            {"flashlights",230}, {"batteries",260}, {"solar_lamps",190}, {"tents",220},
+            {"sleeping_bags",260}, {"mosquito_nets",240}, {"lighters",210}, {"umbrella",190},
+            {"plastic_buckets",240}, {"tarpaulins",210}, {"plastic_sheets",240}, {"hygiene_kits",240},
+            {"wet_wipes",190}, {"gloves",270}, {"trash_bags",240}, {"disposable_plates",260},
+            {"contact_list",250}, {"whistles",190}, {"helmets",180}, {"candles",200},
+            {"sandbags",200}, {"boots",180}, {"baby_formula",190}, {"notebooks",200},
+            {"hand_fans",260}, {"plastic_cups",230}, {"plastic_utensil",180}, {"safety_pins",230},
+            {"rubber_bands",210}, {"slippers",230}, {"raincoats",190}, {"plastic_containers",200},
+            {"tissue",270}, {"towels",190}, {"face_masks",190}, {"ziplock_bag",220},
+            {"biscuits",210}, {"powdered_milk",220}, {"energy_bars",200}, {"trail_mix",280}
+        }},
+        {"QuezonCity", {
+            {"canned_goods",240}, {"water_bottles",320}, {"rice",290},
+            {"noodles",250}, {"medicine",210}, {"blankets",220},
+            {"clothes",230}, {"diapers",260}, {"fuel",270}, {"first_aid",280},
+            {"flashlights",230}, {"batteries",210}, {"solar_lamps",210}, {"tents",230},
+            {"sleeping_bags",190}, {"mosquito_nets",250}, {"lighters",180}, {"umbrella",250},
+            {"plastic_buckets",230}, {"tarpaulins",260}, {"plastic_sheets",190}, {"hygiene_kits",180},
+            {"wet_wipes",190}, {"gloves",190}, {"trash_bags",190}, {"disposable_plates",190},
+            {"contact_list",250}, {"whistles",200}, {"helmets",220}, {"candles",210},
+            {"sandbags",240}, {"boots",250}, {"baby_formula",180}, {"notebooks",190},
+            {"hand_fans",270}, {"plastic_cups",270}, {"plastic_utensil",200}, {"safety_pins",200},
+            {"rubber_bands",250}, {"slippers",230}, {"raincoats",220}, {"plastic_containers",230},
+            {"tissue",210}, {"towels",210}, {"face_masks",200}, {"ziplock_bag",270},
+            {"biscuits",260}, {"powdered_milk",220}, {"energy_bars",180}, {"trail_mix",190}
+        }},
+        {"Pasig", {
+            {"canned_goods",250}, {"water_bottles",330}, {"rice",300},
+            {"noodles",260}, {"medicine",220}, {"blankets",230},
+            {"clothes",240}, {"diapers",270}, {"fuel",280}, {"first_aid",290},
+            {"flashlights",210}, {"batteries",190}, {"solar_lamps",260}, {"tents",220},
+            {"sleeping_bags",260}, {"mosquito_nets",180}, {"lighters",210}, {"umbrella",270},
+            {"plastic_buckets",190}, {"tarpaulins",250}, {"plastic_sheets",230}, {"hygiene_kits",270},
+            {"wet_wipes",180}, {"gloves",260}, {"trash_bags",220}, {"disposable_plates",180},
+            {"contact_list",200}, {"whistles",200}, {"helmets",240}, {"candles",240},
+            {"sandbags",230}, {"boots",190}, {"baby_formula",220}, {"notebooks",190},
+            {"hand_fans",250}, {"plastic_cups",180}, {"plastic_utensil",240}, {"safety_pins",180},
+            {"rubber_bands",210}, {"slippers",200}, {"raincoats",220}, {"plastic_containers",220},
+            {"tissue",180}, {"towels",200}, {"face_masks",230}, {"ziplock_bag",200},
+            {"biscuits",210}, {"powdered_milk",240}, {"energy_bars",230}, {"trail_mix",190}
+        }}
     };
 
     for (auto &city : samples) {
+        // Use the city name as the filename (adjust naming if needed)
         string filename = city.first + ".txt";
         ifstream infile(filename);
-        if (!infile) { // Create file if it doesn't exist.
+        if (!infile) { // File does not exist – create it.
             ofstream outfile(filename);
             if (outfile) {
                 for (auto &supply : city.second) {
@@ -228,6 +313,7 @@ void initializeSampleFiles() {
         }
     }
 }
+
 
 // -----------------------------------------------------------------------------
 // Loads a single city's dataset from its file and registers it in the system.
@@ -477,8 +563,15 @@ int main() {
         cout << "5. View historical transactions\n";
         cout << "6. Exit\n";
         cout << "Enter option: ";
-        cin >> option;
-        cin.ignore();
+
+        if (!(cin >> option)) {
+            cout << "Invalid input. Please enter a number between 1 and 6." << endl;
+            cin.clear(); // Clear the error flag
+            cin.ignore(numeric_limits <streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Skip the rest of the loop and prompt again
+        }
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the newline character
+
         switch (option) {
             case 1:
                 showMetroManilaDataset();
